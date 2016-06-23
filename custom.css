@@ -1,0 +1,97 @@
+@import url('http://fonts.googleapis.com/css?family=Voces');
+@import url('http://fonts.googleapis.com/css?family=Patua+One');
+
+div.cell { /* set cell width to about 80 chars */
+    /* width: 1000px;*/
+}
+
+div #notebook { /* centre the content */
+    background: #fff; /* white background for content */
+    /* width: 98%;
+    min-width: 1000px; 
+    margin: auto;
+    padding-left: 1em; */
+}
+
+div.text_cell_render{
+    font-family: 'Arial' sans-serif;
+    font-size: 14pt;
+    font-weight: 300;
+    line-height: 1.2em;
+    /*width: 950px; 
+    margin-top: 0.15em;
+    padding-top: 0.1em;
+    margin-left:auto;
+    margin-right:auto; */
+}
+
+.text_cell_render .inline-img {
+  display: inline;
+  height: 1.5em;
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.text_cell_render li {
+    line-height: 1.15em;
+    padding-bottom: 0.42em;
+    padding-top: 0.25em;
+}
+
+/* Formatting for header cells */
+.text_cell_render h1 {
+    font-family: 'Arial', sans-serif;
+    color: rgb(20,20,100);
+    font-weight: 700;
+    font-size: 24pt;
+    display: block;
+}
+
+.CodeMirror{
+    // font-family: "PT Mono";
+    font-size: 10pt;
+}
+
+.text_cell_render h2 {
+    font-family: 'Arial', sans-serif;
+    color: rgb(42,42,100);
+    font-weight: 500;
+    font-size: 18pt;
+    display: block;
+}
+
+.text_cell_render h3 {
+    font-family: 'Arial', sans-serif;
+    color: rgb(42,42,100);
+    font-weight: 400;
+    font-size: 16pt;
+    display: block;
+}
+
+.text_cell_render b {
+  color: rgb(42,42,142);
+  font-weight: 800;
+}
+
+.text_cell_render td, th {
+  padding: 1px 1em;
+}
+
+.rendered_html tr, .rendered_html th, .rendered_html td {
+  border: 1px solid white;
+}
+
+/* Formatting for syntax highlighting */
+pre .dos .keyword,
+pre .python .decorator,
+pre .title,
+pre .haskell .type,
+pre .diff .header,
+pre .ruby .class .parent,
+pre .apache .tag,
+pre .nginx .built_in,
+pre .tex .command,
+pre .prompt {
+    color: #020208;
+}
