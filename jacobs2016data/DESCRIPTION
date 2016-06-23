@@ -1,0 +1,11 @@
+Package: jacobs2016data
+Type: Package
+Title: jacobs2016data: Data from Jacobs et al. (2016)
+Version: 0.1
+Date: 2016-06-30
+Description: Data used in Jacobs et al. (2016) related to programming education.
+License:
+  Please direct inquiries to C. Jacobs, corresponding author on the
+  cited paper containing the data.
+Author: C. T. Jacobs, G. J. Gorman, H. E. Rees, L. E. Craig
+Maintainer: Tanya Schlusser <tanya@tickel.net>
