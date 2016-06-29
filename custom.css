@@ -12,7 +12,7 @@ div #notebook { /* centre the content */
 
 div.text_cell_render{
     font-family: 'Arial' sans-serif;
-    font-size: 18pt;
+    font-size: 20pt;
     font-weight: 400;
     line-height: 1.2em;
     /*width: 950px; 
@@ -47,14 +47,14 @@ div.text_cell_render{
 
 .CodeMirror{
     // font-family: "PT Mono";
-    font-size: 16pt;
+    font-size: 18pt;
 }
 
 .text_cell_render h2 {
     font-family: 'Arial', sans-serif;
     color: rgb(42,42,100);
     font-weight: 700;
-    font-size: 20pt;
+    font-size: 24pt;
     display: block;
 }
 
@@ -62,7 +62,7 @@ div.text_cell_render{
     font-family: 'Arial', sans-serif;
     color: rgb(42,42,100);
     font-weight: 600;
-    font-size: 18pt;
+    font-size: 20pt;
     display: block;
 }
 
