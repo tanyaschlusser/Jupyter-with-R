@@ -15,8 +15,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <!-- General and theme style sheets -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/reveal.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/theme/simple.css" id="theme">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/2.6.2/css/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/2.6.2/css/theme/simple.css" id="theme">
 
 <!-- If the query includes 'print-pdf', include the PDF print sheet -->
 <script>
@@ -24,14 +24,14 @@ if( window.location.search.match( /print-pdf/gi ) ) {
         var link = document.createElement( 'link' );
         link.rel = 'stylesheet';
         link.type = 'text/css';
-        link.href = 'https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/css/print/pdf.css';
+        link.href = 'https://cdn.jsdelivr.net/reveal.js/2.6.2/css/print/pdf.css';
         document.getElementsByTagName( 'head' )[0].appendChild( link );
 }
 
 </script>
 
 <!--[if lt IE 9]>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/html5shiv.js"></script>
+<script src="https://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/html5shiv.js"></script>
 <![endif]-->
 
 <!-- Loading the mathjax macro -->
@@ -181,8 +181,8 @@ div #notebook { /* centre the content */
 
 div.text_cell_render{
     font-family: 'Arial' sans-serif;
-    font-size: 14pt;
-    font-weight: 300;
+    font-size: 18pt;
+    font-weight: 400;
     line-height: 1.2em;
     /*width: 950px; 
     margin-top: 0.15em;
@@ -209,29 +209,29 @@ div.text_cell_render{
 .text_cell_render h1 {
     font-family: 'Arial', sans-serif;
     color: rgb(20,20,100);
-    font-weight: 700;
-    font-size: 24pt;
+    font-weight: 800;
+    font-size: 28pt;
     display: block;
 }
 
 .CodeMirror{
     // font-family: "PT Mono";
-    font-size: 10pt;
+    font-size: 16pt;
 }
 
 .text_cell_render h2 {
     font-family: 'Arial', sans-serif;
     color: rgb(42,42,100);
-    font-weight: 500;
-    font-size: 18pt;
+    font-weight: 700;
+    font-size: 20pt;
     display: block;
 }
 
 .text_cell_render h3 {
     font-family: 'Arial', sans-serif;
     color: rgb(42,42,100);
-    font-weight: 400;
-    font-size: 16pt;
+    font-weight: 600;
+    font-size: 18pt;
     display: block;
 }
 
@@ -349,10 +349,14 @@ a.anchor-link {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Using-Jupyter-notebooks-with-R-in-the-classroom">Using Jupyter notebooks with R in the classroom<a class="anchor-link" href="#Using-Jupyter-notebooks-with-R-in-the-classroom">&#182;</a></h1><div style="display:flex;width:80%">
+<h1 id="Using-Jupyter-notebooks-with-R-in-the-classroom">Using Jupyter notebooks with R in the classroom<a class="anchor-link" href="#Using-Jupyter-notebooks-with-R-in-the-classroom">&#182;</a></h1><div style="display:flex;margin: 20px 10%">
 <img src="https://avatars1.githubusercontent.com/u/7388996?v=3&s=400" alt="Jupyter logo" style="height:200px"/>
-<span style="font-size:300%;margin-top:10%">+</span>
+<div style="font-size:300%;margin-top:10%;width:42px">+</div>
 <img src="https://www.r-project.org/logo/Rlogo.png" alt="R logo" style="height:150px"/>
+</div>
+<div style="text-align:center;width:100%;">
+useR!2016<br/>
+Tanya Schlusser
 </div>
 </div>
 </div>
@@ -364,7 +368,7 @@ a.anchor-link {
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Motivation:-work-at-Imperial-College-London">Motivation: work at Imperial College London<a class="anchor-link" href="#Motivation:-work-at-Imperial-College-London">&#182;</a></h2><ul>
 <li>A new introductory programming course for undergraduate geologists (2010)</li>
-<li>Students are not computer science majors</li>
+<li>Students are <em>not</em> computer science majors</li>
 <li>A 5 year effort to find the most successful approach</li>
 <li>C. T. Jacobs, G. J. Gorman, H. E. Rees, L. E. Craig (In Press)</li>
 </ul>
@@ -407,12 +411,41 @@ a.anchor-link {
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <div style="display:flex;width:80%">
-<img src="https://avatars1.githubusercontent.com/u/7388996?v=3&s=400" alt="Jupyter logo" style="height:150px;"/>
-<div style="width:50%;margin-top:50px">
+<img src="https://avatars1.githubusercontent.com/u/7388996?v=3&s=400" alt="Jupyter logo" style="height:200px;"/>
+<div style="width:50%;font-size:200%;line-height:180%">
 Try it out: <br/>
-<a href="http://54.82.252.54:8000/">http://54.82.252.54:8000/</a>
+<a href="http://jupyter.rocks">http://jupyter.rocks</a>
 </div>
 </div>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Benefits">Benefits<a class="anchor-link" href="#Benefits">&#182;</a></h1><ul>
+<li>Libraries and data sets are preloaded</li>
+<li>Simple questions can be answered immediately in class</li>
+<li>Students can help each other</li>
+</ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Caveats">Caveats<a class="anchor-link" href="#Caveats">&#182;</a></h1><p>This is a presentation environment, not a coding one.</p>
+<ul>
+<li>Don't do short examples, do long exercises like with Jacobs <em>et al.</em> <br/><small>(or students just click and run without understanding)</small></li>
+<li>Use RStudio or plain R for work <br/><small>(or students might have trouble understanding the sequential nature of coding)</small></li>
+<li>The paper had a 1:10 TA - to - student ratio in class. <br/><small>(But these were first-year undergraduates.)</small> </li>
+</ul>
+
 </div>
 </div>
 </div></section></section><section><section>
@@ -434,7 +467,13 @@ Try it out: <br/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Creating-the-notebook">Creating the notebook<a class="anchor-link" href="#Creating-the-notebook">&#182;</a></h2><p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Anaconda_Logo.png/200px-Anaconda_Logo.png" alt="Anaconda Logo" style="margin:20px;padding-left:80px"/></p>
+<h2 id="Creating-the-notebook">Creating the notebook<a class="anchor-link" href="#Creating-the-notebook">&#182;</a></h2><div style="display:flex;width:100%;padding:0">
+<div style="width:300px;overflow:hidden;float:right"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Anaconda_Logo.png/200px-Anaconda_Logo.png" alt="Anaconda Logo" style="margin:20px;padding-left:80px"/>
+</div><ul>
+<li>Anaconda is a commercial Python redistribution</li>
+<li>Jupyter is a Python application, and is bundled with Anaconda</li>
+<li>It also provides a repository for popular R libraries</li>
+</ul><p>&lt;/div&gt;</p>
 
 </div>
 </div>
@@ -445,18 +484,14 @@ Try it out: <br/>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Quick-details-for-creating-the-notebook">Quick details for creating the notebook<a class="anchor-link" href="#Quick-details-for-creating-the-notebook">&#182;</a></h3><ol>
-<li>Anaconda provides prepackaged Jupyter notebooks and the IRkernel.</li>
-<li>Create a separate environment:
-<pre><code>conda create -n jupyter_IRKernel python=3 anaconda</code></pre>
+<li>First, install Anaconda (anaconda.org)</li>
+<li>Next, create the environment. (It will be isolated from your regular R environment.) In a terminal shell, type:<div class="highlight"><pre><span></span>$ conda create -n jupyter_IRKernel <span class="nv">python</span><span class="o">=</span><span class="m">3</span> anaconda
+$ conda install -c r -n jupyter_IRKernel r-essentials
+</pre></div>
 </li>
-<li>Get the packages you need, starting with Anaconda's "R essentials":
-<pre><code>conda install -c r -n jupyter_IRKernel r-essentials</code></pre>
-</li>
-<li>Activate the new environment:
-<pre><code>source activate jupyter_IRKernel</code></pre>
-</li>
-<li>Start the local notebook server, and begin editing:
-<pre><code>jupyter notebook</code></pre>
+<li>When you want to use the environment, activate it:<div class="highlight"><pre><span></span>$ <span class="nb">source</span> activate jupyter_IRKernel
+$ jupyter notebook  <span class="c1"># ... and start a local server</span>
+</pre></div>
 </li>
 </ol>
 
@@ -468,10 +503,10 @@ Try it out: <br/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Creating-the-server">Creating the server<a class="anchor-link" href="#Creating-the-server">&#182;</a></h2><div style="display:flex;width:80%;margin:30px;">
+<h1 id="Create-the-server">Create the server<a class="anchor-link" href="#Create-the-server">&#182;</a></h1><div style="display:flex;width:80%;margin:30px;">
 <img src="https://www.docker.com/sites/default/files/legal/small_v.png" alt="Docker logo" style="height:180px"/>
 <span style="font-size:300%;margin-top:10%">+</span>
-<img src="https://avatars1.githubusercontent.com/u/7388996?v=3&s=400" alt="Jupyter logo" style="height:150px"/>
+<img src="https://avatars1.githubusercontent.com/u/7388996?v=3&s=400" alt="Jupyter logo" style="height:160px"/>
 </div>
 </div>
 </div>
@@ -481,25 +516,48 @@ Try it out: <br/>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Quick-details-for-creating-the-server">Quick details for creating the server<a class="anchor-link" href="#Quick-details-for-creating-the-server">&#182;</a></h3><ol>
+<h2 id="Quick-details-for-serving-your-notebook">Quick details for serving your notebook<a class="anchor-link" href="#Quick-details-for-serving-your-notebook">&#182;</a></h2><ol>
 <li>Install Docker on a Linux-like machine: <a href="https://docs.docker.com/engine/installation">https://docs.docker.com/engine/installation</a></li>
-<li>Add your notebook(s) and data to a Docker Image that starts from Jupyter's pre-built image with IRkernel:
-```
-FROM jupyter/r-notebook</li>
-</ol>
-<h1 id="Add-my-own-R-file">Add my own R file<a class="anchor-link" href="#Add-my-own-R-file">&#182;</a></h1><p>COPY jacobs2016data_0.1.tar.gz /home/$NB_USER/work</p>
-<h1 id="Add-the-notebook">Add the notebook<a class="anchor-link" href="#Add-the-notebook">&#182;</a></h1><p>COPY example-Jupyter-R.ipynb  /home/$NB_USER/work/notebooks</p>
-<p>RUN cd /home/$NB_USER/work \
-    &amp;&amp; R CMD INSTALL jacobs2016data_0.1.tar.gz \
-    &amp;&amp; rm jacobs2016data_0.1.tar.gz</p>
-
-<pre><code>3. Build the image</code></pre>
-<p>docker build   --tag <your-dockerhub-id>/r-notebook-example  .
-```</p>
-<ol>
+<li>Add your notebook(s) and data to a Dockerfile that starts from Jupyter's pre-built image with IRkernel, and build the Docker Image.</li>
+<li>Build the image.</li>
 <li>Run!  ... The commands are long for a slide, but they're also here:<br/>
 <a href="https://github.com/jupyter/tmpnb-deploy">https://github.com/jupyter/tmpnb-deploy</a></li>
 </ol>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Step-2:--make-a-Docker-image-with-your-notebook">Step 2:  make a Docker image with your notebook<a class="anchor-link" href="#Step-2:--make-a-Docker-image-with-your-notebook">&#182;</a></h3><h4 id="The-full-Dockerfile-for-today's-example">The full Dockerfile for today's example<a class="anchor-link" href="#The-full-Dockerfile-for-today's-example">&#182;</a></h4><div class="highlight"><pre><span></span>FROM jupyter/r-notebook
+
+<span class="c1"># Add my own R file</span>
+COPY jacobs2016data_0.1.tar.gz /home/$NB_USER/work
+
+<span class="c1"># Add the notebook</span>
+COPY example-Jupyter-R.ipynb  /home/$NB_USER/work/notebooks
+
+RUN <span class="nb">cd</span> /home/$NB_USER/work <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> R CMD INSTALL jacobs2016data_0.1.tar.gz <span class="se">\</span>
+    <span class="o">&amp;&amp;</span> rm jacobs2016data_0.1.tar.gz
+</pre></div>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Step-2-(continued...):--make-a-Docker-image-with-your-notebook">Step 2 (continued...):  make a Docker image with your notebook<a class="anchor-link" href="#Step-2-(continued...):--make-a-Docker-image-with-your-notebook">&#182;</a></h3><h4 id="The-command-to-build-the-Docker-Image">The command to build the Docker Image<a class="anchor-link" href="#The-command-to-build-the-Docker-Image">&#182;</a></h4><p>From within the directory containing the Dockerfile and my Jupyter notebook:</p>
+<div class="highlight"><pre><span></span>$ docker build  --tag &lt;dockerhub-id&gt;/&lt;image-name&gt;  .
+$ <span class="c1"># e.g.</span>
+$ docker build --tag tanya/r-notebook .
+</pre></div>
 
 </div>
 </div>
@@ -527,6 +585,15 @@ FROM jupyter/r-notebook</li>
 <li>Related blog post: <a href="http://software-carpentry.org/blog/2016/06/teaching-python-to-undergraduate-geoscientists.html">http://software-carpentry.org/blog/2016/06/teaching-python-to-undergraduate-geoscientists.html</a></li>
 <li>Related slides: <a href="http://christianjacobs.uk/hen-2016-sticky-notes">http://christianjacobs.uk/hen-2016-sticky-notes</a></li>
 </ul>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Documentation">Documentation<a class="anchor-link" href="#Documentation">&#182;</a></h2><ul>
 <li>Jupyter main page: <a href="http://jupyter.org/">http://jupyter.org/</a></li>
 <li>IRkernel main page: <a href="https://irkernel.github.io/">https://irkernel.github.io/</a></li>
@@ -556,8 +623,8 @@ require(
       waitSeconds: 15
     },
     [
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/head.min.js",
-      "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/js/reveal.js"
+      "https://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/head.min.js",
+      "https://cdn.jsdelivr.net/reveal.js/2.6.2/js/reveal.js"
     ],
 
     function(head, Reveal){
@@ -573,9 +640,9 @@ require(
 
             // Optional libraries used to extend on reveal.js
             dependencies: [
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/lib/js/classList.js",
+                { src: "https://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/classList.js",
                   condition: function() { return !document.body.classList; } },
-                { src: "https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.3.0/plugin/notes/notes.js",
+                { src: "https://cdn.jsdelivr.net/reveal.js/2.6.2/plugin/notes/notes.js",
                   async: true,
                   condition: function() { return !!document.body.classList; } }
             ]
