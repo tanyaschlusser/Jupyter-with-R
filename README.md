@@ -1,7 +1,7 @@
 # Using Jupyter notebooks with R in the classroom
 
-<img alt="Jupyter Logo" src="https://avatars1.githubusercontent.com/u/7388996?v=3&s=400" style="height:200px"/>
-<img alt="R Logo" src="https://www.r-project.org/logo/Rlogo.png"  style="height:200px"/>
+<img alt="Jupyter Logo" src="https://avatars1.githubusercontent.com/u/7388996?v=3&s=400" style="width:200px"/>
+<img alt="R Logo" src="https://www.r-project.org/logo/Rlogo.png"  style="width:200px"/>
 
 
 # To build your own slides from the notebook:
