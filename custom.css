@@ -1,3 +1,6 @@
+@import url('http://fonts.googleapis.com/css?family=Voces');
+@import url('http://fonts.googleapis.com/css?family=Patua+One');
+
 div.cell { /* set cell width to about 80 chars */
     /* width: 1000px;*/
 }
@@ -12,8 +15,8 @@ div #notebook { /* centre the content */
 
 div.text_cell_render{
     font-family: 'Arial' sans-serif;
-    font-size: 20pt;
-    font-weight: 400;
+    font-size: 14pt;
+    font-weight: 300;
     line-height: 1.2em;
     /*width: 950px; 
     margin-top: 0.15em;
@@ -40,29 +43,29 @@ div.text_cell_render{
 .text_cell_render h1 {
     font-family: 'Arial', sans-serif;
     color: rgb(20,20,100);
-    font-weight: 800;
-    font-size: 28pt;
+    font-weight: 700;
+    font-size: 24pt;
     display: block;
 }
 
 .CodeMirror{
     // font-family: "PT Mono";
-    font-size: 18pt;
+    font-size: 10pt;
 }
 
 .text_cell_render h2 {
     font-family: 'Arial', sans-serif;
     color: rgb(42,42,100);
-    font-weight: 700;
-    font-size: 24pt;
+    font-weight: 500;
+    font-size: 18pt;
     display: block;
 }
 
 .text_cell_render h3 {
     font-family: 'Arial', sans-serif;
     color: rgb(42,42,100);
-    font-weight: 600;
-    font-size: 20pt;
+    font-weight: 400;
+    font-size: 16pt;
     display: block;
 }
 
