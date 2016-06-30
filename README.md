@@ -132,19 +132,22 @@ export PREFIX=https://cdn.jsdelivr.net/reveal.js/3.0.0; \
 ## Links
 
 ### The paper that inspired this
-[Jacobs _et al._](http://arxiv.org/pdf/1505.05425)
-[Related blog post at Software-Carpentry](http://software-carpentry.org/blog/2016/06/teaching-python-to-undergraduate-geoscientists.html)
-[Related slide deck](http://christianjacobs.uk/hen-2016-sticky-notes)
-[Their course on GitHub](https://github.com/ggorman/Introduction-to-programming-for-geoscientists)
+- [Jacobs _et al._](http://arxiv.org/pdf/1505.05425)
+- [Related blog post at Software-Carpentry](http://software-carpentry.org/blog/2016/06/teaching-python-to-undergraduate-geoscientists.html)
+- [Related slide deck](http://christianjacobs.uk/hen-2016-sticky-notes)
+- [Their course on GitHub](https://github.com/ggorman/Introduction-to-programming-for-geoscientists)
 
 ### Documentation
-[The Jupyter Project](http://jupyter.org/)
-[IR Kernel](https://irkernel.github.io/)
+- [The Jupyter Project](http://jupyter.org/)
+- [IR Kernel](https://irkernel.github.io/)
 
 ### Resources
-[Anaconda R repository](https://anaconda.org/r)
-[Jupyter R stack](https://github.com/jupyter/docker-stacks/tree/master/r-notebook)
-[Related slides for this repository](https://tanyaschlusser.github.io/Jupyter-with-R/)
+- [Anaconda R repository](https://anaconda.org/r)
+- [Jupyter's base Dockerfile for R](https://github.com/jupyter/docker-stacks/tree/master/r-notebook)
+- [Related slides for this repository](https://tanyaschlusser.github.io/Jupyter-with-R/)
+- +JupyterHub+, an alternative to +tmpnb+ that has user authenticated logins using the
+  users on a single computer -- good for classes that can have a dedicated computer
+  at school [JupyterHub](https://github.com/jupyterhub/jupyterhub)
 
 ## Thank you
 My participation would not have been possible without
