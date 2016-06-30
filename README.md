@@ -145,7 +145,7 @@ export PREFIX=https://cdn.jsdelivr.net/reveal.js/3.0.0; \
 - [Anaconda R repository](https://anaconda.org/r)
 - [Jupyter's base Dockerfile for R](https://github.com/jupyter/docker-stacks/tree/master/r-notebook)
 - [Related slides for this repository](https://tanyaschlusser.github.io/Jupyter-with-R/)
-- +JupyterHub+, an alternative to +tmpnb+ that has user authenticated logins using the
+- *JupyterHub*, an alternative to *tmpnb* that has user authenticated logins using the
   users on a single computer -- good for classes that can have a dedicated computer
   at school [JupyterHub](https://github.com/jupyterhub/jupyterhub)
 
