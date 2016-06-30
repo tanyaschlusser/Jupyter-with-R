@@ -454,9 +454,9 @@ Try a notebook: <br/>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Caveats">Caveats<a class="anchor-link" href="#Caveats">&#182;</a></h1><p>This is a presentation environment, not a coding one.</p>
 <ul>
-<li>Don't do short examples, do long exercises like with Jacobs <em>et al.</em> <br/><small>(or students just click and run without understanding)</small></li>
+<li>Don't do short examples, do long exercises<br/><small>(or students just click and run without understanding)</small></li>
 <li>Use RStudio or plain R for work <br/><small>(or students might have trouble understanding the sequential nature of coding)</small></li>
-<li>The paper had a 1:10 TA - to - student ratio in class. <br/><small>(But these were first-year undergraduates.)</small> </li>
+<li>The paper had a 1:10 TA - to - student ratio in class. <br/><small>(But these were first-year undergraduates)</small> </li>
 </ul>
 
 </div>
@@ -484,7 +484,7 @@ Try a notebook: <br/>
 <img src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Anaconda_Logo.png/200px-Anaconda_Logo.png" alt="Anaconda Logo" style="position:absolute;top:-70px;right:0px;margin:0px;10px"/>
 <ul>
 <li>Anaconda is a commercial Python redistribution</li>
-<li>Jupyter is a Python application, and is bundled with Anaconda</li>
+<li>Jupyter is bundled with Anaconda</li>
 <li>It also provides a repository for popular R libraries</li>
 </ul>
 </div>
@@ -497,7 +497,7 @@ Try a notebook: <br/>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Quick-details-for-creating-the-notebook">Quick details for creating the notebook<a class="anchor-link" href="#Quick-details-for-creating-the-notebook">&#182;</a></h3><ol>
-<li>First, install Anaconda (anaconda.org)</li>
+<li>First, install Anaconda (<a href="https://www.continuum.io/downloads">https://www.continuum.io/downloads</a>)<br><small>(Prefer Python version 3.X)</small></li>
 <li>Next, create the environment. (It will be isolated from your regular R environment.) In a terminal shell, type:<div class="highlight"><pre><span></span>$ conda create -n jupyter_IRKernel <span class="nv">python</span><span class="o">=</span><span class="m">3</span> anaconda
 $ conda install -c r -n jupyter_IRKernel r-essentials
 </pre></div>
@@ -518,7 +518,7 @@ $ jupyter notebook  <span class="c1"># ... and start a local server</span>
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Create-the-server">Create the server<a class="anchor-link" href="#Create-the-server">&#182;</a></h1><div style="display:flex;width:80%;margin:30px;">
 <img src="https://www.docker.com/sites/default/files/legal/small_v.png" alt="Docker logo" style="height:180px"/>
-<span style="font-size:300%;margin-top:10%">+</span>
+<span style="font-size:300%;margin:10%">+</span>
 <img src="https://avatars1.githubusercontent.com/u/7388996?v=3&s=400" alt="Jupyter logo" style="height:160px"/>
 </div>
 </div>
@@ -530,7 +530,7 @@ $ jupyter notebook  <span class="c1"># ... and start a local server</span>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Quick-details-for-serving-your-notebook">Quick details for serving your notebook<a class="anchor-link" href="#Quick-details-for-serving-your-notebook">&#182;</a></h2><ol>
-<li>Install Docker on a Linux-like machine: <a href="https://docs.docker.com/engine/installation">https://docs.docker.com/engine/installation</a></li>
+<li>Install Docker: <a href="https://docs.docker.com/engine/installation">https://docs.docker.com/engine/installation</a></li>
 <li>Add your notebook(s) and data to a Dockerfile that starts from Jupyter's pre-built image with IRkernel, and build the Docker Image.</li>
 <li>Build the image.</li>
 <li>Run!  ... The commands are long for a slide, but they're also here:<br/>
@@ -545,7 +545,8 @@ $ jupyter notebook  <span class="c1"># ... and start a local server</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Step-2:--make-a-Docker-image-with-your-notebook">Step 2:  make a Docker image with your notebook<a class="anchor-link" href="#Step-2:--make-a-Docker-image-with-your-notebook">&#182;</a></h3><h4 id="The-full-Dockerfile-for-today's-example">The full Dockerfile for today's example<a class="anchor-link" href="#The-full-Dockerfile-for-today's-example">&#182;</a></h4><div class="highlight"><pre><span></span>FROM jupyter/r-notebook
+<h3 id="Step-2:--make-a-Docker-image-with-your-notebook">Step 2:  make a Docker image with your notebook<a class="anchor-link" href="#Step-2:--make-a-Docker-image-with-your-notebook">&#182;</a></h3><p>The full Dockerfile for today's example is:</p>
+<div class="highlight"><pre><span></span>FROM jupyter/r-notebook
 
 <span class="c1"># Add my own R file</span>
 COPY jacobs2016data_0.1.tar.gz /home/$NB_USER/work
@@ -557,6 +558,7 @@ RUN <span class="nb">cd</span> /home/$NB_USER/work <span class="se">\</span>
     <span class="o">&amp;&amp;</span> R CMD INSTALL jacobs2016data_0.1.tar.gz <span class="se">\</span>
     <span class="o">&amp;&amp;</span> rm jacobs2016data_0.1.tar.gz
 </pre></div>
+<p>It derives from Jupyter's <a href="https://github.com/jupyter/docker-stacks/tree/master/r-notebook">base R notebook</a>, which defines the <code>$NB_USER</code> Docker variable.</p>
 
 </div>
 </div>
@@ -566,7 +568,7 @@ RUN <span class="nb">cd</span> /home/$NB_USER/work <span class="se">\</span>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Step-2-(continued...):--make-a-Docker-image-with-your-notebook">Step 2 (continued...):  make a Docker image with your notebook<a class="anchor-link" href="#Step-2-(continued...):--make-a-Docker-image-with-your-notebook">&#182;</a></h3><h4 id="The-command-to-build-the-Docker-Image">The command to build the Docker Image<a class="anchor-link" href="#The-command-to-build-the-Docker-Image">&#182;</a></h4><p>From within the directory containing the Dockerfile and my Jupyter notebook:</p>
+<h3 id="Step-2-(continued...):--make-a-Docker-image-with-your-notebook">Step 2 (continued...):  make a Docker image with your notebook<a class="anchor-link" href="#Step-2-(continued...):--make-a-Docker-image-with-your-notebook">&#182;</a></h3><p>To build the Docker Image, change directories to the one containing the Dockerfile, and type:</p>
 <div class="highlight"><pre><span></span>$ docker build  --tag &lt;dockerhub-id&gt;/&lt;image-name&gt;  .
 $ <span class="c1"># e.g.</span>
 $ docker build --tag tanya/r-notebook .
@@ -593,10 +595,21 @@ $ docker build --tag tanya/r-notebook .
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Thank-you.--Related-links:">Thank you.  Related links:<a class="anchor-link" href="#Thank-you.--Related-links:">&#182;</a></h1><h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><ul>
-<li>C. T. Jacobs, G. J. Gorman, H. E. Rees, L. E. Craig (In Press). Experiences with efficient methodologies for teaching computer programming to geoscientists. Journal of Geoscience Education. Pre-print: <a href="http://arxiv.org/abs/1505.05425">http://arxiv.org/abs/1505.05425</a></li>
-<li>Related blog post: <a href="http://software-carpentry.org/blog/2016/06/teaching-python-to-undergraduate-geoscientists.html">http://software-carpentry.org/blog/2016/06/teaching-python-to-undergraduate-geoscientists.html</a></li>
-<li>Related slides: <a href="http://christianjacobs.uk/hen-2016-sticky-notes">http://christianjacobs.uk/hen-2016-sticky-notes</a></li>
+<h1 id="Thank-you">Thank you<a class="anchor-link" href="#Thank-you">&#182;</a></h1><p>My participation would not have been possible without the R Diversity Initiative. And the organizers' and attendees' kind accommodation of my Mom and of me.</p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Related-links">Related links<a class="anchor-link" href="#Related-links">&#182;</a></h1><h2 id="References">References<a class="anchor-link" href="#References">&#182;</a></h2><ul>
+<li>The Github repo: <a href="http://bit.ly/jupyter-rocks">http://bit.ly/jupyter-rocks</a></li>
+<li>The slides: <a href="http://bit.ly/jupyter-rocks-slides">http://bit.ly/jupyter-rocks-slides</a></li>
+<li>Paper about the teaching work: <a href="http://bit.ly/teach-with-jupyter-paper">http://bit.ly/teach-with-jupyter-paper</a></li>
+<li>Blog post about the teaching work: <a href="http://bit.ly/teach-with-jupyter">http://bit.ly/teach-with-jupyter</a></li>
 </ul>
 
 </div>
@@ -613,12 +626,11 @@ $ docker build --tag tanya/r-notebook .
 <li>JupyterHub tutorial: <a href="http://jupyterhub-tutorial.readthedocs.io/en/latest/JupyterHub-Tutorial.html">http://jupyterhub-tutorial.readthedocs.io/en/latest/JupyterHub-Tutorial.html</a></li>
 <li>tmpnb GitHub page: <a href="https://github.com/jupyter/tmpnb">https://github.com/jupyter/tmpnb</a></li>
 </ul>
+<p>(JupyterHub is better for classes and tmpnb is better for conferences.)</p>
 <h2 id="Resources">Resources<a class="anchor-link" href="#Resources">&#182;</a></h2><ul>
-<li>The executable notebook from this talk: <a href="http://54.82.252.54:8000/">http://54.82.252.54:8000/</a></li>
-<li>The GitHub repo behind the slides: <a href="https://github.com/tanyaschlusser/Jupyter-with-R">https://github.com/tanyaschlusser/Jupyter-with-R</a></li>
-<li>Today's slides: <a href="https://tanyaschlusser.github.io/Jupyter-with-R/">https://tanyaschlusser.github.io/Jupyter-with-R/</a></li>
 <li>Using Anaconda with R: <a href="https://www.continuum.io/conda-for-r">https://www.continuum.io/conda-for-r</a></li>
 <li>The Anaconda R repository: <a href="https://anaconda.org/r">https://anaconda.org/r</a></li>
+<li>The base Jupyter notebook with R: <a href="https://github.com/jupyter/docker-stacks/tree/master/r-notebook">https://github.com/jupyter/docker-stacks/tree/master/r-notebook</a></li>
 </ul>
 
 </div>
