@@ -1,8 +1,9 @@
 # Using Jupyter notebooks with R in the classroom
 
+<div style="width:100%;height:200px;display:flex;justify-content:space-around">
 <img alt="Jupyter Logo" src="https://github.com/tanyaschlusser/Jupyter-with-R/blob/master/img/Jupyter-logo-200x200.png"/>
 <img alt="R Logo" src="https://github.com/tanyaschlusser/Jupyter-with-R/blob/master/img/R-logo-229x200.png"/>
-
+</div>
 
 # To build your own slides from a Jupyter notebook:
 
